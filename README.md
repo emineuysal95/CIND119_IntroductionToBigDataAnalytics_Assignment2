@@ -22,13 +22,6 @@ In this assignment, an SQLite database was created, a dataset was inserted into 
 - SQLite Studio
 - SQL (Structured Query Language)
 
-## 📁 Repository Structure
-```
-├── sample.db                # SQLite database file
-├── assignment_queries.sql   # SQL queries executed for the assignment
-├── README.md                # Assignment description and summary
-```
-
 ## 🎯 Learning Outcome
 This assignment demonstrates basic SQL proficiency including data creation, filtering, aggregation, and conditional selection in a relational database using SQLite.
 
