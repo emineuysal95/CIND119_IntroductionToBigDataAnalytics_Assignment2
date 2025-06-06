@@ -27,7 +27,7 @@ This assignment demonstrates basic SQL proficiency including data creation, filt
 
 ---
 
-Author: Emine Uysal
-Assignment_2: SQLite Data Quering
-Date: November 2024
+#Author: Emine Uysal
+#Assignment_2: SQLite Data Quering
+#Date: November 2024
 
