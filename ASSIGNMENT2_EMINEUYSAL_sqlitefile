@@ -1,0 +1,164 @@
+ /* Question 2: Within the "sample" database, create a table called "test_data" and load the following data into the table */ 
+
+CREATE TABLE test_data (
+    Order_ID     INTEGER       NOT NULL,
+    Product_Name VARCHAR (200),
+    Category     VARCHAR (120),
+    Quantity     INTERGER      NOT NULL,
+    Price        INTEGER       NOT NULL,
+    PRIMARY KEY (
+        Order_ID
+    )
+);
+
+
+INSERT INTO test_data VALUES (
+                          1,
+                          'Laptop',
+                          'Electronics',
+                          5,
+                          500
+                      );
+
+INSERT INTO test_data VALUES (
+                          2,
+                          'Headphones',
+                          'Electronics',
+                          3,
+                          100
+                      );
+
+INSERT INTO test_data VALUES (
+                          3,
+                          'Chair',
+                          'Furniture',
+                          2,
+                          200
+                      );
+
+INSERT INTO test_data VALUES (
+                          4,
+                          'Desk',
+                          'Furniture',
+                          1,
+                          400
+                      );
+
+INSERT INTO test_data VALUES (
+                          5,
+                          'iPhone',
+                          'Electronics',
+                          2,
+                          800
+                      );
+
+INSERT INTO test_data VALUES (
+                          6,
+                          'Book',
+                          'Books',
+                          10,
+                          20
+                      );
+
+INSERT INTO test_data VALUES (
+                          7,
+                          'Shoes',
+                          'Apparel',
+                          4,
+                          150
+                      );
+
+INSERT INTO test_data VALUES (
+                          8,
+                          'T-shirt',
+                          'Apparel',
+                          7,
+                          50
+                      );
+
+INSERT INTO test_data VALUES (
+                          9,
+                          'Watch',
+                          'Apparel',
+                          1,
+                          250
+                      );
+
+INSERT INTO test_data VALUES (
+                          10,
+                          'Blender',
+                          'Home Appliance',
+                          1,
+                          300
+                      );
+
+INSERT INTO test_data VALUES (
+                          11,
+                          'Fridge',
+                          'Home Appliance',
+                          1,
+                          1200
+                      );
+
+INSERT INTO test_data VALUES (
+                          12,
+                          'Cookware Set',
+                          'Home Appliance',
+                          3,
+                          100
+                      );
+
+INSERT INTO test_data VALUES (
+                          13,
+                          'Vacuum Cleaner',
+                          'Home Appliance',
+                          1,
+                          350
+                      );
+
+INSERT INTO test_data VALUES (
+                          14,
+                          'Keyboard',
+                          'Electronics',
+                          2,
+                          75
+                      );
+
+INSERT INTO test_data VALUES (
+                          15,
+                          'Monitor',
+                          'Electronics',
+                          1,
+                          200
+                      );
+
+
+/* Question 3: Write SQL queries to select/compute data from the "test_data" table. (2 points each) */
+/* a. Select the Product_Name and Price of products where the Category is 'Electronics' */
+
+SELECT Product_Name, Price
+FROM test_data
+WHERE Category = 'Electronics';
+
+/* b. Compute the average price of products in the 'Apparel' category */
+
+SELECT AVG(Price) AS Avg_Apparel_Price
+FROM test_data
+WHERE Category = 'Apparel';
+
+/* c. Select all fields of products where the price is less than 200 */
+
+SELECT *FROM test_data
+WHERE Price < 200;
+
+/* d. Select the Order_ID and Product_Name of products where the Quantity is equal to 1 */
+
+SELECT Order_ID, Product_Name
+FROM test_data
+WHERE Quantity = 1;
+
+/* e. Compute the total revenue (Price * Quantity) for each Category */
+
+SELECT Category, SUM(Price * Quantity) AS Total_Revenue
+FROM test_data
+GROUP BY Category;
